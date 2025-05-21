@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TaskTracker.Models.TaskItem>
+@{
+   
+}
+
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>📌 Title</th>
+                        <th>📁 Category</th>
+                        <th>📝 Description</th>
+                        <th>📅 Due Date</th>
+                        <th>⚡ Priority</th>
+                        <th>✅ Status</th>
+                        <th style="width: 150px;" class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.Title</td>
+                                <td>@item.Category</td>
+                                <td class="text-muted">@item.Description</td>
+                                <td>@item.DueDate.ToShortDateString()</td>
+                                <td>
+                                    <span class="badge
+                                        @(item.Priority == "High" ? "bg-danger" :
+                                          item.Priority == "Medium" ? "bg-warning text-dark" :
+                                          "bg-secondary")">
+                                        @item.Priority
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge
+                                        @(item.Status == "Completed" ? "bg-success" : "bg-info text-dark")">
+                                        @item.Status
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">
+                                <em>No tasks available. Click "Create Task" to get started!</em>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

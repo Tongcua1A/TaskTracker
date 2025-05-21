@@ -1,0 +1,31 @@
+﻿@model TaskTracker.Models.TaskItem
+@{
+    ViewData["Title"] = "Delete Task";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 border-0" style="background-color: #fdf9f6; border-radius: 18px;">
+        <h2 class="text-center mb-4" style="color: #6a8f72;">🍄 Delete Task</h2>
+
+        <h4 class="text-center mb-4" style="color: #507c59;">Are you sure you want to delete this?</h4>
+
+        <div class="mb-4" style="color: #3a4b3c; font-weight: 600;">
+            <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">@Model.Title</h5>
+            <p style="line-height: 1.5;">
+                <strong>Category:</strong> @Model.Category<br />
+                <strong>Due Date:</strong> @Model.DueDate.ToShortDateString()<br />
+                <strong>Status:</strong> @Model.Status
+            </p>
+        </div>
+
+        <form asp-action="Delete" class="d-flex justify-content-center gap-3">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn" style="background-color: #f5c6da; color: #3a4b3c; border-radius: 12px; padding: 0.5rem 1.5rem;">
+                🍓 Delete
+            </button>
+            <a asp-action="Index" class="btn" style="background-color: #bde0c3; color: #3a4b3c; border-radius: 12px; padding: 0.5rem 1.5rem;">
+                Cancel
+            </a>
+        </form>
+    </div>
+</div>

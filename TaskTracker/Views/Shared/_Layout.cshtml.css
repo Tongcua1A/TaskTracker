@@ -1,0 +1,91 @@
+﻿/* 🍃 Forest Cottagecore Theme 🌿 */
+
+body {
+    background-color: #f3f8f4; /* Soft misty green */
+    font-family: 'Georgia', 'Noto Serif', 'Segoe UI', sans-serif;
+    color: #3a4b3c; /* Deep woodland brownish green */
+}
+
+.navbar {
+    background-color: #e4f0e4 !important; /* Light leafy green */
+    border-bottom: 2px dashed #b6dcb6;
+    box-shadow: 0 4px 12px rgba(174, 204, 174, 0.2);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #507c59 !important; /* Mossy green */
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        color: #6e8b7a !important;
+    }
+
+.btn-primary {
+    background-color: #b6e2b6 !important; /* Light green */
+    border-color: #9fc89f !important;
+    color: #3a4b3c !important;
+}
+
+.btn-outline-secondary {
+    border-color: #9fc89f !important;
+    color: #507c59 !important;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #d8f5d8 !important;
+        color: #3a4b3c !important;
+    }
+
+.btn-success {
+    background-color: #88c999 !important;
+    border-color: #6faf7e !important;
+    color: #fff !important;
+}
+
+.card {
+    background-color: #f6fbf6;
+    border-radius: 20px;
+    border: 2px solid #d6e6d6;
+    box-shadow: 0 5px 15px rgba(150, 180, 150, 0.15);
+}
+
+.card-header {
+    background-color: #d9f2d9;
+    color: #3e5f48;
+    border-bottom: 1px solid #b6dcb6;
+}
+
+footer.footer {
+    background-color: #e4f0e4;
+    color: #507c59;
+    border-top: 2px dashed #b6dcb6;
+    text-align: center;
+}
+
+/* Form fields */
+input.form-control,
+textarea.form-control,
+select.form-control {
+    border-radius: 12px;
+    border: 1px solid #c4d8c4;
+    background-color: #ffffff;
+}
+
+/* Optional background decoration for cottagecore forest mood */
+body::after {
+    content: '';
+    background-image: url('https://i.imgur.com/fqpjqW9.png'); /* 🍄 Transparent forest accents */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 200px;
+    opacity: 0.1;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: -1;
+}

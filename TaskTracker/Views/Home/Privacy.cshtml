@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style>
+    .cottage-card {
+        background-color: #fdf6f0;
+        border: 2px solid #c3e8c8;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(160, 190, 170, 0.3);
+        color: #3e4730;
+    }
+
+    .cottage-header {
+        background: linear-gradient(to right, #d4f4dd, #f7d6e0);
+        border-bottom: 2px solid #c3e8c8;
+        color: #4b3e36;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+
+    .section-title {
+        color: #7a9e7e;
+    }
+
+    ul li::marker {
+        color: #c88e99;
+    }
+
+    .btn-home {
+        border: 2px solid #9cd9b6;
+        background-color: transparent;
+        color: #4b3e36;
+    }
+
+        .btn-home:hover {
+            background-color: #c8ecd4;
+            color: #3e4730;
+        }
+</style>
+
+<div class="container mt-5">
+    <div class="card cottage-card">
+        <div class="card-header cottage-header text-center">
+            <h3 class="mb-0"><i class="bi bi-shield-lock-fill"></i> 🍃 Privacy Policy 🍄</h3>
+        </div>
+        <div class="card-body px-4">
+            <p class="lead fw-medium">Your safety is sacred here — like a secret forest path no one else can see 🧚</p>
+
+            <hr class="my-4" />
+
+            <h5 class="section-title">🔒 What We Collect</h5>
+            <ul>
+                <li>Your username and email — just enough to know it's you.</li>
+                <li>The tasks you create, so they can grow safely under your care.</li>
+            </ul>
+
+            <h5 class="section-title">🌱 How We Use It</h5>
+            <ul>
+                <li>To gently display your tasks and progress.</li>
+                <li>To keep your task garden private and personalized.</li>
+            </ul>
+
+            <h5 class="section-title">🚫 What We Don’t Do</h5>
+            <ul>
+                <li>No data selling. Ever.</li>
+                <li>No tracking your movements outside this cozy app.</li>
+            </ul>
+
+            <h5 class="section-title">🧺 Your Control</h5>
+            <p>
+                You can always update or remove your tasks — like trimming flowers in your planner. For full account deletion or help, please contact us.
+            </p>
+
+            <div class="mt-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-home rounded-pill px-4">
+                    <i class="bi bi-house-heart-fill"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
